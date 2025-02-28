@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1515.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shallomCollege.Instructor">
+   <content>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1515.0" style="-fx-background-color: black;">
+         <children>
+            <ScrollPane layoutX="9.0" layoutY="38.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="770.0" prefWidth="1478.0" style="-fx-background-color: orange;">
+                     <children>
+                        <AnchorPane fx:id="navBar" prefHeight="50.0" prefWidth="1477.0" style="-fx-background-color: #7e5115;">
+                           <children>
+                              <Button id="activeBtn" layoutX="446.0" layoutY="12.0" mnemonicParsing="false" onAction="#instructorHome" stylesheets="@shallomStyle.css" text="Home" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label alignment="BOTTOM_LEFT" layoutY="8.0" prefHeight="34.0" prefWidth="275.0" text="Shallom College Instructors Portal" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Button id="menuBtn" layoutX="636.0" layoutY="12.0" mnemonicParsing="false" onAction="#updateStudentResult" stylesheets="@shallomStyle.css" text="Update result" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button id="menuBtn" layoutX="901.0" layoutY="10.0" mnemonicParsing="false" onAction="#yourStudents" stylesheets="@shallomStyle.css" text="Your Students" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button id="menuBtn" layoutX="1138.0" layoutY="12.0" mnemonicParsing="false" onAction="#report" stylesheets="@shallomStyle.css" text="Report" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button id="menuBtn" fx:id="logout" layoutX="1358.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" style="-fx-border-color: white;" stylesheets="@shallomStyle.css" text="logout" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="sideBar" layoutX="5.0" layoutY="54.0" prefHeight="706.0" prefWidth="278.0" style="-fx-background-color: #7e5115;">
+                           <children>
+                              <Label alignment="CENTER" layoutX="31.0" layoutY="4.0" prefHeight="26.0" prefWidth="220.0" text="Instructor Information" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia" size="16.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="instructorProfileImage" fitHeight="220.0" fitWidth="226.0" layoutX="28.0" layoutY="32.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../../../OneDrive/Pictures/Screenshots/Screenshot%202024-08-24%20090227.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelInstName" alignment="CENTER" layoutX="-1.0" layoutY="252.0" prefHeight="34.0" prefWidth="284.0" text="Instructor name" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelId" alignment="CENTER" layoutX="3.0" layoutY="287.0" prefHeight="34.0" prefWidth="276.0" text="Inst_Id" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="31.0" layoutY="322.0" prefHeight="34.0" prefWidth="220.0" text="Instructing:" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelCourse1" alignment="CENTER" layoutX="3.0" layoutY="356.0" prefHeight="54.0" prefWidth="275.0" style="-fx-border-color: white; -fx-text-alignment: center;" text="course1 " textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelCourse2" alignment="CENTER" layoutX="3.0" layoutY="437.0" prefHeight="54.0" prefWidth="276.0" style="-fx-border-color: white; -fx-text-alignment: center;" text="course2" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelPhone" alignment="CENTER" layoutX="-3.0" layoutY="519.0" prefHeight="34.0" prefWidth="282.0" style="-fx-border-width: 1.5px 0px 0px 0px 0px;" text="Mobile Phone: " textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelEmail" alignment="CENTER" layoutX="2.0" layoutY="562.0" prefHeight="25.0" prefWidth="278.0" text="Contact Mail" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button id="menuBtn" layoutX="44.0" layoutY="606.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="194.0" style="-fx-border-color: white; -fx-border-radius: 20px;" stylesheets="@shallomStyle.css" text="Update information" textFill="WHITE">
+                                 <font>
+                                    <Font name="Georgia Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="setInstImage" layoutX="218.0" layoutY="215.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="36.0" style="-fx-background-color: lightgray;" text="+">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="labelInstSetYourImage" alignment="CENTER" layoutX="155.0" layoutY="174.0" prefHeight="31.0" prefWidth="96.0" style="-fx-background-color: gray; -fx-text-fill: white; -fx-border-color: white;" text="set you Image" visible="false" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ancHome" layoutX="300.0" layoutY="61.0" prefHeight="706.0" prefWidth="1182.0" style="-fx-background-color: orange;">
+                           <children>
+                              <TableView fx:id="yourCourse" layoutX="4.0" layoutY="77.0" prefHeight="378.0" prefWidth="1174.0" style="-fx-background-color: #7e5115;" stylesheets="@shallomStyle.css">
+                                 <columns>
+                                    <TableColumn fx:id="yourCoursecoCode" maxWidth="137.5999755859375" prefWidth="109.5999755859375" style="-fx-font-size: 16;" styleClass="table-view" text="Course Code" />
+                                    <TableColumn fx:id="yourCoursecoName" maxWidth="513.5999755859375" prefWidth="474.4000244140625" style="-fx-font-size: 16; -fx-wrap-text: True;" styleClass="table-view" text="Course Name" />
+                                    <TableColumn fx:id="yourCoursedept" maxWidth="504.7999267578125" prefWidth="319.9998779296875" style="-fx-font-size: 16;" styleClass="table-view" text="Departement" />
+                                    <TableColumn fx:id="yourCoursecredit" maxWidth="281.5999755859375" prefWidth="107.199951171875" style="-fx-font-size: 16;" styleClass="table-view" text="Credits" />
+                                    <TableColumn fx:id="yourCourseyrs" maxWidth="274.4000244140625" prefWidth="72.0001220703125" style="-fx-font-size: 16;" styleClass="table-view" text="year" />
+                                    <TableColumn fx:id="yourCoursesems" maxWidth="274.4000244140625" prefWidth="72.0001220703125" style="-fx-font-size: 16;" styleClass="table-view" text="semster" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="4.0" layoutY="41.0" prefHeight="29.0" prefWidth="274.0" text="Courses you are Instructing Now">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ancUpdateResult" layoutX="300.0" layoutY="51.0" prefHeight="718.0" prefWidth="1500.0" visible="false">
+                           <children>
+                              <Label layoutX="470.0" layoutY="43.0" prefHeight="11.0" prefWidth="211.0" text="Update Result " textFill="#2317a9" underline="true">
+                                 <font>
+                                    <Font name="Georgia Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="assesmentTable" editable="true" layoutX="3.0" layoutY="140.0" onMouseClicked="#udateResult2" style="-fx-background-color: #7e5115;" stylesheets="@shallomStyle.css">
+                                 <columns>
+                                    <TableColumn fx:id="stuId" editable="false" prefWidth="46.4000244140625" styleClass="table-view" text="stuId" />
+                                    <TableColumn fx:id="assStudentName" editable="false" prefWidth="206.39999389648438" style="-fx-font-size: 16;" styleClass="table-view" text="student name" />
+                                    <TableColumn fx:id="assCourseCode" editable="false" prefWidth="131.99993896484375" style="-fx-font-size: 16;" styleClass="table-view" text="Course Code" />
+                                    <TableColumn fx:id="assCourseName" editable="false" prefWidth="290.40008544921875" style="-fx-font-size: 16;" styleClass="table-view" text="Course Name" />
+                                    <TableColumn fx:id="assCredit" editable="false" prefWidth="54.39996337890625" style="-fx-font-size: 16;" styleClass="table-view" text="Credit" />
+                                    <TableColumn fx:id="assQ1" prefWidth="69.5999755859375" style="-fx-font-size: 16;" styleClass="table-view" text="Quize1" />
+                                    <TableColumn fx:id="assQ2" prefWidth="64.7999267578125" style="-fx-font-size: 16;" styleClass="table-view" text="Quize2" />
+                                    <TableColumn fx:id="assMid" prefWidth="53.5999755859375" style="-fx-font-size: 16;" styleClass="table-view" text="Mid" />
+                                    <TableColumn fx:id="assAsst" prefWidth="54.39990234375" style="-fx-font-size: 16;" styleClass="table-view" text="Asst" />
+                                    <TableColumn fx:id="assFinal" prefWidth="46.39990234375" style="-fx-font-size: 16;" styleClass="table-view" text="Final" />
+                                    <TableColumn fx:id="assTotal" prefWidth="49.599853515625" style="-fx-font-size: 16;" styleClass="table-view" text="Total" />
+                                    <TableColumn fx:id="assStatus" prefWidth="70.4000244140625" style="-fx-font-size: 16;" styleClass="table-view" text="Status" />
+                                    <TableColumn fx:id="assGrade" prefWidth="92.00009765625009" style="-fx-font-size: 16;" styleClass="table-view" text="Grade" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="FilterStudent" layoutX="946.0" layoutY="97.0" promptText="Filter">
+                                 <font>
+                                    <Font name="Times New Roman" size="17.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ancYourStudent" layoutX="300.0" layoutY="61.0" prefHeight="708.0" prefWidth="1300.0" style="-fx-background-color: orange;" visible="false">
+                           <children>
+                              <TableView fx:id="yourStudent" layoutX="3.0" layoutY="58.0" prefHeight="432.0" prefWidth="1166.0">
+                                <columns>
+                                    <TableColumn fx:id="studentName" prefWidth="279.20001220703125" style="-fx-font-size: 16;" text="student name" />
+                                    <TableColumn fx:id="corName" prefWidth="621.5999755859375" style="-fx-font-size: 16;" text="course name" />
+                                    <TableColumn fx:id="yr" prefWidth="83.199951171875" style="-fx-font-size: 16;" text="year" />
+                                    <TableColumn fx:id="sm" prefWidth="96.800048828125" style="-fx-font-size: 16;" text="semster" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="ancReport" layoutX="300.0" layoutY="61.0" prefHeight="708.0" prefWidth="1178.0" visible="false">
+                           <children>
+                              <TextArea layoutX="313.0" layoutY="212.0" prefHeight="200.0" prefWidth="639.0" promptText="write your report">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </TextArea>
+                              <Label alignment="CENTER" layoutX="476.0" layoutY="70.0" prefHeight="46.0" prefWidth="314.0" text="report" textFill="WHITE">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                              </Label>
+                              <Button id="btn" layoutX="508.0" layoutY="505.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="250.0" stylesheets="@shallomStyle.css" text="Submit">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

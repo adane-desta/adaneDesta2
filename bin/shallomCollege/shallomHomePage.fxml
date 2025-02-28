@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="scc" prefHeight="820.0" prefWidth="1515.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shallomCollege.Main">
+  <content>
+    <AnchorPane style="-fx-pref-height: 100%; -fx-pref-width: 100%; -fx-max-height: 100%; -fx-max-width: 100%; -fx-min-height: 50%; -fx-min-width: 50%;">
+         <children>
+            <ImageView fx:id="imageKey" fitHeight="189.0" fitWidth="209.0" layoutX="587.0" layoutY="14.0" pickOnBounds="true">
+               <effect>
+                  <DropShadow height="255.0" offsetY="10.0" radius="127.0" spread="0.08" width="255.0">
+                     <color>
+                        <Color opacity="0.5440729856491089" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <image>
+                  <Image url="@../../../../Downloads/Telegram%20Desktop/photo_2024-10-16_15-57-08.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="427.0" layoutY="212.0" prefHeight="131.0" prefWidth="528.0" style="-fx-text-alignment: center;" text="Shallom Business And Technology College" textFill="#dc1d1d" wrapText="true">
+               <font>
+                  <Font name="Georgia Bold" size="45.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="564.0" layoutY="343.0" prefHeight="47.0" prefWidth="254.0" style="-fx-text-alignment: center;" text="Hawassa Campus" textFill="#dc1d1d" wrapText="true">
+               <font>
+                  <Font name="Georgia Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="492.0" layoutY="408.0" prefHeight="133.0" prefWidth="459.0" style="-fx-text-alignment: center;" text="BE HERE ... BE VIBRANT!" textFill="#09942a" wrapText="true">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="32.0" />
+               </font>
+            </Label>
+            <Button id="btn" fx:id="loginBtn" layoutX="557.0" layoutY="615.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="330.0" stylesheets="@shallomStyle.css" text="login" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="27.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="641.0" layoutY="542.0" prefHeight="46.0" prefWidth="148.0" style="-fx-text-alignment: center;" text="Get Started" textFill="#09942a" wrapText="true">
+               <font>
+                  <Font name="Lucida Bright Demibold" size="17.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+  </content>
+</ScrollPane>

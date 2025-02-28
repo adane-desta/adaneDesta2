@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="293.0" prefWidth="799.0" style="-fx-background-color: white; -fx-background-color: lightgray;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="labelReporterName" layoutX="175.0" layoutY="46.0" prefHeight="27.0" prefWidth="303.0" text="user name ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="reporterImage" fitHeight="106.0" fitWidth="100.0" layoutX="48.0" layoutY="36.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../OneDrive/Pictures/Screenshots/Screenshot%202024-08-24%20090227.png" />
+         </image>
+      </ImageView>
+      <Circle fill="#1f93ff00" layoutX="98.0" layoutY="87.0" radius="77.0" stroke="#e1dcdc" strokeType="INSIDE" strokeWidth="30.0" />
+      <Label fx:id="labelReporterUserType" prefHeight="27.0" prefWidth="63.0" text="usetype" textFill="#030000" />
+      <Label fx:id="reportDate" layoutX="502.0" layoutY="56.0" prefHeight="30.0" prefWidth="235.0" text="Label">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="reportBox" editable="false" layoutX="148.0" layoutY="87.0" prefHeight="154.0" prefWidth="590.0" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
