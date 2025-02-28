@@ -37,6 +37,6 @@ GitHub: adane-desta
 
 phone: +251986144648
 
-if you want to get sql script for the database feel free to call me or email me using my phone or email provided above
+if you want to get sql script for the database feel free to call me or email me  contact details provided above
 
 Thank you!
